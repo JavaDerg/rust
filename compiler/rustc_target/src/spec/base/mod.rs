@@ -35,3 +35,5 @@ pub(crate) mod windows_gnullvm;
 pub(crate) mod windows_msvc;
 pub(crate) mod windows_uwp_gnu;
 pub(crate) mod windows_uwp_msvc;
+
+pub(crate) mod wicker;
