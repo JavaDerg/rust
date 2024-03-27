@@ -18,10 +18,8 @@ pub fn target() -> Target {
         static_position_independent_executables: true,
         relro_level: RelroLevel::Full,
         linker_flavor: LinkerFlavor::Gnu(Cc::No, Lld::Yes),
-        linker: Some("rust-lld".into()),
-        features:
-            "-3dnow,-3dnowa,-avx,-avx2,+rdrnd,+rdseed"
-                .into(),
+        linker: Some("ld.lld".into()),
+        features: "-3dnow,-3dnowa,-avx,-avx2,+rdrnd,+rdseed".into(),
         supported_sanitizers: SanitizerSet::KCFI | SanitizerSet::KERNELADDRESS,
         disable_redzone: true,
         panic_strategy: PanicStrategy::Abort,
